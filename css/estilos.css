@@ -209,7 +209,7 @@ h2{
 
 
 .imagen4{
-   background-image: url(../images/lawless-capture-XKvXTRi_13g-unsplash.jpg);
+   background-color: black;
    background-size: 100%;
    background-attachment: fixed;
 }
@@ -779,3 +779,4 @@ nav .icon-burger .line {
    height: 100%;
    
 }
+
