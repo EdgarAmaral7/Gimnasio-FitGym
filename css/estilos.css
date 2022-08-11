@@ -5,6 +5,10 @@
   font-family: "poppins";
   src: url("../assets/fonts/Poppins-SemiBold.ttf");
 }
+.nav-menu li:last-child {
+  background: rgb(143, 122, 17);
+}
+
 body {
   background-color: black;
   font-family: "Poppins", sans-serif;
