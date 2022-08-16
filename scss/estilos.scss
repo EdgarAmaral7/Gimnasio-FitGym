@@ -1,6 +1,7 @@
 $color-gold: rgb(143, 122, 17);
 
 
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 /*Font Descargada*/
 @font-face {
@@ -786,3 +787,14 @@ nav .icon-burger .line {
    
 }
 
+$color: (
+   color: gray,
+   centro: center,
+   tfuente: 35px,
+   1rem: 1rem
+
+);
+
+@mixin tittle {
+   background-color: black;
+}
