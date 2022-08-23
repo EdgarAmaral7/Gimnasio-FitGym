@@ -1,4 +1,4 @@
-$color-gold: rgb(143, 122, 17);
+
 
 
 
@@ -27,6 +27,18 @@ body{
    padding: 0; 
    box-sizing: border-box;
    
+}
+
+$color: (
+   color: gray,
+   centro: center,
+   tfuente: 35px,
+   1rem: 1rem
+
+);
+
+@mixin tittle {
+   background-color: black;
 }
 
 header{
@@ -175,6 +187,8 @@ h2{
    margin: 0;
 
 }
+
+$color-gold: rgb(143, 122, 17);
 
 .card .card-body a{
    text-decoration: none;
@@ -787,14 +801,3 @@ nav .icon-burger .line {
    
 }
 
-$color: (
-   color: gray,
-   centro: center,
-   tfuente: 35px,
-   1rem: 1rem
-
-);
-
-@mixin tittle {
-   background-color: black;
-}
