@@ -1,7 +1,7 @@
 
 let genero = prompt("Ingresa tu genero (Hombre o Mujer)");
 
-if (genero == "Hombre") {
+if (genero == "Hombre"  || genero == "hombre") {
     let peso = prompt("Ingresa tu peso en kilogramos:");
     let estatura = prompt("Ingresa tu estatura en metros:");
 
@@ -20,6 +20,31 @@ if (genero == "Hombre") {
         alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad");
     }
     if (resultado >= 35){
+        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad morbida");
+    }
+
+    
+}
+
+if (genero == "Mujer"  || genero == "mujer") {
+    let peso = prompt("Ingresa tu peso en kilogramos:");
+    let estatura = prompt("Ingresa tu estatura en metros:");
+
+    let calculo = (estatura * estatura)
+    let resultado = (peso / calculo)
+    if (resultado < 18.5){
+        alert("Tu IMC es de: " + resultado + ", y estás bajo de peso");
+    }
+    if (resultado >= 18.5  && resultado <= 23.9){
+        alert("Tu IMC es de: " + resultado + ", y estás en peso normal");
+    }
+    if (resultado >= 24  && resultado <= 28.9){
+        alert("Tu IMC es de: " + resultado + ", y estás en sobrepeso");
+    }
+    if (resultado >= 29  && resultado <= 33.9){
+        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad");
+    }
+    if (resultado >= 34){
         alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad morbida");
     }
 
