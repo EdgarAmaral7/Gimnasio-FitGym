@@ -1,52 +1,35 @@
 
-let genero = prompt("Ingresa tu genero (Hombre o Mujer)");
+function calcularimc(){
+    let img = document.getElementById('img')
+    let altura = document.getElementById('altura').value
+    let peso = document.getElementById('peso').value
 
-if (genero == "Hombre"  || genero == "hombre") {
-    let peso = prompt("Ingresa tu peso en kilogramos:");
-    let estatura = prompt("Ingresa tu estatura en metros:");
+    let imc = peso / (altura * altura).toFixed(2)
 
-    let calculo = (estatura * estatura)
-    let resultado = (peso / calculo)
-    if (resultado < 18.5){
-        alert("Tu IMC es de: " + resultado + ", y estás bajo de peso");
+    if (imc >= 0 && imc < 18.5){
+        img.src = '/images/falco.webp'
+        document.body.style.background = '#686a30'
     }
-    if (resultado >= 18.5  && resultado <= 24.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en peso normal");
+    else if( imc >= 18.5 && imc < 24.9){
+        img.src = '/images/calvo.jpg'
+        document.body.style.background = '#686a30'
     }
-    if (resultado >= 25  && resultado <= 29.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en sobrepeso");
+    else if( imc >= 25 && imc < 30){
+        img.src = '/images/sobre.jpg'
+        document.body.style.background = '#686a30'
     }
-    if (resultado >= 30  && resultado <= 34.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad");
+    else if( imc >= 30.1 && imc < 35){
+        img.src = '/images/obeso.jpg'
+        document.body.style.background = '#686a30'
     }
-    if (resultado >= 35){
-        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad morbida");
+    else if( imc >= 35.1 && imc < 99){
+        img.src = '/images/mor.jpg'
+        document.body.style.background = '#686a30'
+    }
+    else{imc
     }
 
-    
 }
 
-if (genero == "Mujer"  || genero == "mujer") {
-    let peso = prompt("Ingresa tu peso en kilogramos:");
-    let estatura = prompt("Ingresa tu estatura en metros:");
-
-    let calculo = (estatura * estatura)
-    let resultado = (peso / calculo)
-    if (resultado < 18.5){
-        alert("Tu IMC es de: " + resultado + ", y estás bajo de peso");
-    }
-    if (resultado >= 18.5  && resultado <= 23.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en peso normal");
-    }
-    if (resultado >= 24  && resultado <= 28.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en sobrepeso");
-    }
-    if (resultado >= 29  && resultado <= 33.9){
-        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad");
-    }
-    if (resultado >= 34){
-        alert("Tu IMC es de: " + resultado + ", y estás en grado de obesidad morbida");
-    }
-
-    
-}
+let button = document.getElementById('button')
+button.addEventListener('click', calcularimc)
