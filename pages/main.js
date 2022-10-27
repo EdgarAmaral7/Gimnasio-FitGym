@@ -31,7 +31,7 @@ function calcularimc(){
 
 }
 
-let button = document.getElementById('button')
+let button = document.getElementById('button88')
 button.addEventListener('click', calcularimc)
 
 
